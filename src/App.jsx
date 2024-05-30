@@ -1,9 +1,15 @@
 import './App.css';
 import ClickHandle from './algo/matching-algo';
 
+const HandleSubmit = () => {
+  window.location.reload();
+}
+
 function App() {
   return (
     <div className="App">
+      <div className='topbar'><h1>Matching Game</h1></div>
+      <br/><br/><br/>
       <table>
         <tbody>
           <tr>
@@ -40,6 +46,8 @@ function App() {
         </tbody>
       </table>
       <canvas id="canvas"></canvas>
+      <div className='topbar'><button type='button' onClick={HandleSubmit}>Submit!</button></div>
+      <footer><p>hint: 1-4, 2-3</p></footer>
     </div>
   );
 }

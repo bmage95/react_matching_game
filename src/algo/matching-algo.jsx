@@ -9,7 +9,9 @@ const ClickHandle = (event) => {
     const buttonRect = button.getBoundingClientRect();
     const buttonMidX = buttonRect.left + buttonRect.width / 2;
     const buttonMidY = buttonRect.top + buttonRect.height / 2;
-  
+
+    //left side components
+
     if (buttonId === "1") {
       if (!lastButtonClicked || lastButtonClicked === "2") {
         lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });
@@ -26,6 +28,9 @@ const ClickHandle = (event) => {
       } else {
         window.alert("Already Matched/Choose another option");
       }
+
+    //right side components
+
     } else if (buttonId === "3") {
       if (lastButtonClicked === "2" && lines.length > 0 && lines[lines.length - 1].end === null) {
         lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };

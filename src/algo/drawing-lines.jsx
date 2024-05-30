@@ -1,6 +1,5 @@
 let lines = [];
 
-
 const drawLines = () => {
     const canvas = document.getElementById("canvas");
     const table = document.querySelector('table');
