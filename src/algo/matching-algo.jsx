@@ -1,5 +1,5 @@
 import drawLines from "./drawing-lines";
-import {lines} from "./drawing-lines";
+import { lines } from "./drawing-lines";
 
 let lastButtonClicked = "";
 
@@ -9,8 +9,6 @@ const ClickHandle = (event) => {
     const buttonRect = button.getBoundingClientRect();
     const buttonMidX = buttonRect.left + buttonRect.width / 2;
     const buttonMidY = buttonRect.top + buttonRect.height / 2;
-
-    //left side components
 
     if (buttonId === "1") {
       if (!lastButtonClicked || lastButtonClicked === "2") {
@@ -28,9 +26,6 @@ const ClickHandle = (event) => {
       } else {
         window.alert("Already Matched/Choose another option");
       }
-
-    //right side components
-
     } else if (buttonId === "3") {
       if (lastButtonClicked === "2" && lines.length > 0 && lines[lines.length - 1].end === null) {
         lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };
@@ -46,7 +41,6 @@ const ClickHandle = (event) => {
         window.alert("Incorrect Option");
       }
     }
-  }
-  
+}
+
 export default ClickHandle;
-  
