@@ -16,7 +16,7 @@ const ClickHandle = (event) => {
         lastButtonClicked = "1";
         console.log(`Button 1 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
       } else {
-        window.alert("Already matched/Choose another option");
+        window.alert("Selected/Choose another option");
       }
     } else if (buttonId === "2") {
       if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "3" || lastButtonClicked === "4") {
@@ -24,7 +24,7 @@ const ClickHandle = (event) => {
         lastButtonClicked = "2";
         console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
       } else {
-        window.alert("Already Matched/Choose another option");
+        window.alert("Selected/Choose another option");
       }
     } else if (buttonId === "3") {
       if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "2" || lastButtonClicked === "4") {
@@ -32,7 +32,7 @@ const ClickHandle = (event) => {
         lastButtonClicked = "3";
         console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
       } else {
-        window.alert("Already Matched/Choose another option");
+        window.alert("Selected/Choose another option");
       }
     } else if (buttonId === "4") {
       if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "2" || lastButtonClicked === "3") {
@@ -40,7 +40,7 @@ const ClickHandle = (event) => {
         lastButtonClicked = "4";
         console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
       } else {
-        window.alert("Already Matched/Choose another option");
+        window.alert("Selected/Choose another option");
       }
 
     //set left matches to which right logic here(in last clicked):
