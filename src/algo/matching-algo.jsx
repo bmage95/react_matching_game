@@ -11,7 +11,7 @@ const ClickHandle = (event) => {
     const buttonMidY = buttonRect.top + buttonRect.height / 2;
 
     if (buttonId === "1") {
-      if (!lastButtonClicked || lastButtonClicked === "2") {
+      if (!lastButtonClicked || lastButtonClicked === "2" || lastButtonClicked === "3" || lastButtonClicked === "4" ) {
         lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });
         lastButtonClicked = "1";
         console.log(`Button 1 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
@@ -19,7 +19,7 @@ const ClickHandle = (event) => {
         window.alert("Already matched/Choose another option");
       }
     } else if (buttonId === "2") {
-      if (!lastButtonClicked || lastButtonClicked === "1") {
+      if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "3" || lastButtonClicked === "4") {
         lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });
         lastButtonClicked = "2";
         console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
@@ -27,14 +27,49 @@ const ClickHandle = (event) => {
         window.alert("Already Matched/Choose another option");
       }
     } else if (buttonId === "3") {
+      if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "2" || lastButtonClicked === "4") {
+        lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });
+        lastButtonClicked = "3";
+        console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
+      } else {
+        window.alert("Already Matched/Choose another option");
+      }
+    } else if (buttonId === "4") {
+      if (!lastButtonClicked || lastButtonClicked === "1" || lastButtonClicked === "2" || lastButtonClicked === "3") {
+        lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });
+        lastButtonClicked = "4";
+        console.log(`Button 2 was clicked at x: ${buttonMidX}, y: ${buttonMidY}`);
+      } else {
+        window.alert("Already Matched/Choose another option");
+      }
+
+    //set left matches to which right logic here(in last clicked):
+
+    } else if (buttonId === "5") {
+      if (lastButtonClicked === "4" && lines.length > 0 && lines[lines.length - 1].end === null) {
+        lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };
+        drawLines();
+      } else {
+        window.alert("Incorrect Option");
+      }
+    } else if (buttonId === "6") {
       if (lastButtonClicked === "2" && lines.length > 0 && lines[lines.length - 1].end === null) {
         lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };
         drawLines();
       } else {
         window.alert("Incorrect Option");
       }
-    } else if (buttonId === "4") {
+    }
+    else if (buttonId === "7") {
       if (lastButtonClicked === "1" && lines.length > 0 && lines[lines.length - 1].end === null) {
+        lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };
+        drawLines();
+      } else {
+        window.alert("Incorrect Option");
+      }
+    }
+    else if (buttonId === "8") {
+      if (lastButtonClicked === "3" && lines.length > 0 && lines[lines.length - 1].end === null) {
         lines[lines.length - 1].end = { x: buttonMidX, y: buttonMidY };
         drawLines();
       } else {

@@ -4,6 +4,7 @@
     width: 280px;
     height: 80px;
     border-radius: 12px;
+    position: relative;
 }
 
 .Left .inside_button {
@@ -20,7 +21,7 @@
 .Right .inside_button {
     position: relative;
     right: 38%;
-    bottom: 15%;
+    bottom: 0%;
     background-color: yellow;
     width: 50px;
     height: 50px;
@@ -127,4 +128,13 @@ html{
     100% {
       transform: scale(1);
     }
+}
+
+img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-45%);;
 }
