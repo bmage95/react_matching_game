@@ -48,8 +48,10 @@ function App() {
         </table>
         <canvas id="canvas"></canvas>
       </div>
-      <div className='topbar'><button type='button' onClick={HandleSubmit}>Submit!</button></div>
-      <footer><p>hint: 1-4, 2-3</p></footer>
+      
+      <footer><p>hint: 1-4, 2-3</p>
+      <div className='botbar'><button type='button' onClick={HandleSubmit}>Submit!</button></div></footer>
+
     </div>
   );
 }
