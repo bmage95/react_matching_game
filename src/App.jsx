@@ -110,7 +110,8 @@ const App = () => {
       <div id="myModal" className={`modal ${modalVisible ? '' : 'modal-hidden'}`}>
         <div className="modal-content">
           <span className="close" onClick={closeModal}>&times;</span>
-          <p>Good job!</p>
+          <p>Good Job!</p>
+          <img src={require('./assets/elbato.png')} alt='batmans'/>
         </div>
       </div>
     </div>

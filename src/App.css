@@ -186,4 +186,24 @@ img {
   .modal-hidden {
     display: none;
   }
-  
+
+  .modal-content{
+    position: relative;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    background-color: antiquewhite;
+  }
+
+  .modal-content p {
+    text-align: center;
+    font-size: 28px;
+    font-family: fantasy;
+  }
+
+  .modal-content img {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    right: 31.5%;
+  }
