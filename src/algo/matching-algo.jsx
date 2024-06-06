@@ -1,15 +1,16 @@
 import drawLines from "./drawing-lines";
 import { lines } from "./drawing-lines";
 
-let lastButtonClicked = "";
+let lastButtonClicked = "";                                         
 
 const ClickHandle = (event) => {
-    const button = event.target;
+    const button = event.target;                                       //declaring necessart vars and calc
     const buttonId = button.id;
     const buttonRect = button.getBoundingClientRect();
     const buttonMidX = buttonRect.left + buttonRect.width / 2;
     const buttonMidY = buttonRect.top + buttonRect.height / 2;
 
+    //left buttons
     if (buttonId === "1") {
       if (!lastButtonClicked || lastButtonClicked === "2" || lastButtonClicked === "3" || lastButtonClicked === "4" ) {
         lines.push({ start: { x: buttonMidX, y: buttonMidY }, end: null });

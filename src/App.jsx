@@ -4,19 +4,21 @@ import ClickHandle from './algo/matching-algo';
 import { lines } from './algo/drawing-lines';
 
 const App = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);    //pop up state
 
   const HandleSubmit = () => {
     let allMatched = lines.length >= 4 && lines.every(line => line.end !== null);
 
-    if (allMatched) {
+    //^check if all lines are matched
+
+    if (allMatched) {                 //show pop up
       setModalVisible(true);
     } else {
       alert('Please match all the tiles.');
     }
   }
 
-  const closeModal = () => {
+  const closeModal = () => {      //on pop up close refresh
     setModalVisible(false);
     window.location.reload();
   }

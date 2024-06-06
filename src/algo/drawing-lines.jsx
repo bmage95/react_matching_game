@@ -1,17 +1,17 @@
 let lines = [];                                                       //no of lines drawn
 let currentLine = null;                                               //line being drawn currently
-const tableContainer = document.querySelector('.table-container');    //boundary conditions
+const tableContainer = document.querySelector('.table-container');    //boundary conditions as global var
 
 const drawLines = () => {
-    const canvas = document.getElementById("canvas");
-    const tableContainer = document.querySelector('.table-container');  
-    canvas.width = tableContainer.offsetWidth;
+    const canvas = document.getElementById("canvas");                   //pull canvas tag
+    const tableContainer = document.querySelector('.table-container');   //within function def
+    canvas.width = tableContainer.offsetWidth;                           //setting width/height
     canvas.height = tableContainer.offsetHeight;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d");                                  //2d graph
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    lines.forEach(line => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);                     //setting canvas
+    lines.forEach(line => {                                               //draw properties
       if (line.start && line.end) {
         ctx.beginPath();
         ctx.moveTo(line.start.x - tableContainer.offsetLeft, line.start.y - tableContainer.offsetTop);
@@ -19,13 +19,6 @@ const drawLines = () => {
         ctx.stroke();
       }
     });
-
-    if (currentLine && currentLine.start) {
-      ctx.beginPath();
-      ctx.moveTo(currentLine.start.x - tableContainer.offsetLeft, currentLine.start.y - tableContainer.offsetTop);
-      ctx.lineTo(currentLine.end.x - tableContainer.offsetLeft, currentLine.end.y - tableContainer.offsetTop);
-      ctx.stroke();
-    }
 }
 
 export default drawLines;
