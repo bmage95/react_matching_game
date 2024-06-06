@@ -7,9 +7,17 @@
     position: relative;
 }
 
+.inside_button {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+}
+
 .Left .inside_button {
     position: relative;
-    left: 38%;
+    left: 40%;
     bottom: 15%;
     width: 50px;
     height: 50px;
@@ -78,17 +86,17 @@ table {
 }
 
 .Left .value_inside {
-    position: relative;
+    position: absolute;
     text-align: left;
     left: 10%;
-    top: 30%;
+    top: 40%;
 }
 
 .Right .value_inside {
-    position: relative;
+    position: absolute;
     text-align: right;
     right: 10%;
-    top: 30%;
+    top: 42%;
 }
 
 .value_inside {
