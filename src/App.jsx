@@ -3,8 +3,6 @@ import './App.css';
 import ClickHandle from './algo/matching-algo';
 import { lines } from './algo/drawing-lines';
 
-
-
 const App = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
