@@ -81,14 +81,14 @@ table {
     position: absolute;
     text-align: left;
     left: 10%;
-    top: 40%;
+    top: 35%;
 }
 
 .Right .value_inside {
     position: absolute;
     text-align: right;
     right: 10%;
-    top: 42%;
+    top: 45%;
 }
 
 .value_inside {
@@ -235,3 +235,10 @@ img {
     position: absolute;
     right: 31.5%;
 }
+
+.custom-xarrow {
+    stroke: red;
+    stroke-width: 2px;
+    marker-end: url(#arrowhead);
+  }
+

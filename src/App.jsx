@@ -114,7 +114,7 @@ const HandleSubmit = () => {
         </table>
       <canvas id="canvas"></canvas>
         {arrows.map((ar) => (
-          <Xarrow start={ar.start} end={ar.end} key={ar.start + '-' + ar.end} />
+          <Xarrow start={ar.start} end={ar.end} key={ar.start + '-' + ar.end} strokeWidth={3} color='green'/>
         ))}
       </div>
       <footer>

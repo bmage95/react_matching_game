@@ -8,7 +8,7 @@ const connectPointOffset = {
   bottom: { left: '50%', top: '100%', transform: 'translate(-50%, -50%)' },
 };
 
-const ConnectPointsWrapper = ({ boxId, handler, ref0, connectPointStyle, connectPointClass, addArrow }) => {
+const ConnectPointsWrapper = ({ boxId, handler, ref0, connectPointStyle, connectPointClass }) => {
   const ref1 = useRef();
   const [position, setPosition] = useState({});
   const [beingDragged, setBeingDragged] = useState(false);
