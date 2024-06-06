@@ -4,13 +4,13 @@ import '../App.css';
 
 const RconnectPointStyle = {
   position: 'absolute',
-  width: 40,
-  height: 40,
+  width: 48,
+  height: 48,
   borderRadius: '50%',
   background: 'black',
 };
 
-const RightBox = ({ text, handler, addArrow, boxId }) => (
+const RightBox = ({ text, handler, addArrow, boxId , lineCount, setLineCount}) => (
   <Box
     text={text}
     handler={handler}
@@ -18,6 +18,8 @@ const RightBox = ({ text, handler, addArrow, boxId }) => (
     boxId={boxId}
     connectPointStyle={RconnectPointStyle}
     connectPointClass="inside_button"
+    lineCount={lineCount}
+    setLineCount={setLineCount}
   />
 );
 

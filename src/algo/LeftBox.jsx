@@ -4,13 +4,14 @@ import '../App.css';
 
 const LconnectPointStyle = {
   position: 'absolute',
-  width: 40,
-  height: 40,
+  width: 48,
+  height: 48,
   borderRadius: '50%',
   background: 'black',
 };
 
-const LeftBox = ({ text, handler, addArrow, boxId }) => (
+const LeftBox = ({ text, handler, addArrow, boxId}) =>
+    (
   <Box
     text={text}
     handler={handler}
@@ -19,6 +20,5 @@ const LeftBox = ({ text, handler, addArrow, boxId }) => (
     connectPointStyle={LconnectPointStyle}
     connectPointClass="inside_button"
   />
-);
-
+    );
 export default LeftBox;
